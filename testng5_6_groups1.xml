@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite1">
+  <test thread-count="5" name="Test1">
+    <groups>
+      <run>
+        <include name="smokeTest"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testng5.HelloWorld1">
+      <methods>
+        <include name="create.*"/>
+      </methods>
+      </class>
+      <class name="testng5.HelloWorld2"/>
+    </classes>
+  </test>
+  <test thread-count="5" name="Test2">
+    <groups>
+      <run>
+        <exclude name="regressionTest"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testng6.HelloWorld3">
+      	<methods>
+      	  <exclude name="create.*"/>
+      	</methods>
+      </class>
+      <class name="testng6.HelloWorld4"/>
+      <class name="testng5.HelloWorld1"/>
+    </classes>
+  </test>
+</suite>

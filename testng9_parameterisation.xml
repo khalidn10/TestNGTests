@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite1">
+  <parameter name="parameter1" value="suite parameter1"/>
+  <parameter name="parameter2" value="300"/>
+  <test thread-count="5" name="Test1">
+    <parameter name="parameter1" value="test1 parameter1"/>
+    <parameter name="parameter2" value="100"/>
+    <classes>
+      <class name="testng9.PrintParams1"/>
+      <class name="testng9.PrintParams2"/>
+    </classes>
+  </test>
+  <test thread-count="5" name="Test2">
+    <parameter name="parameter1" value="test2 parameter1"/>
+    <parameter name="parameter2" value="200"/>
+    <classes>
+      <class name="testng9.PrintParams1"/>
+      <class name="testng9.PrintParams2"/>
+    </classes>
+  </test>
+  <test thread-count="5" name="Test3">
+    <classes>
+      <class name="testng9.PrintParams1"/>
+      <class name="testng9.PrintParams2"/>
+      <class name="testng9.DataDriven"/>
+    </classes>
+  </test>
+</suite>
